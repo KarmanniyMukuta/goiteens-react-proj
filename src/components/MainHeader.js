@@ -2,6 +2,7 @@ import {string} from "prop-types";
 import {Link} from "react-router-dom";
 import {ThemeColors} from "../constants/colors";
 import CoolButton from "./CoolButton";
+import AddMod from "./AddMod";
 
 const styles = {
     "container": {
@@ -79,10 +80,12 @@ const MainHeader = (props) => {
                     {linkItems}
                 </div>
                     <a href="#">
-                        <CoolButton>Додати стартап</CoolButton>
+                        <CoolButton onclick='AddMod()'>Додати стартап</CoolButton>
                     </a>
-            </div>
-        </header>
+            </div> 
+            <script src={AddMod}></script>
+        </header>  
+       
     );
 }
 
@@ -90,4 +93,4 @@ MainHeader.propTypes = {
     active: string,
 }
 
-export default MainHeader
+export default MainHeader   // ИСХОД

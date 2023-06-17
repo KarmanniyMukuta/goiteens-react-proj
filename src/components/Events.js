@@ -38,6 +38,7 @@ const Events = (props) => {
                 </div>
             </div>
       </section> 
+      
 </body>
 
 
@@ -51,3 +52,4 @@ Events.propTypes = {
 }
 
 export default Events
+
