@@ -11,6 +11,7 @@
   background: #344a72;
   color: #fff;
   line-height: 1.8;
+  z-index: 120
 }
 
 .a_add {

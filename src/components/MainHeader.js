@@ -2,19 +2,13 @@ import {string} from "prop-types";
 import {Link} from "react-router-dom";
 import {ThemeColors} from "../constants/colors";
 import CoolButton from "./CoolButton";
-<<<<<<< HEAD
-import AddMod from "./AddMod";
 
 
-
-
-
-
-
-
-=======
 import {useEffect, useState} from "react";
->>>>>>> 8323967400856b35cdb261a77ac892de97e7b809
+
+
+
+
 
 const styles = {
     "container": {
@@ -115,53 +109,40 @@ const MainHeader = (props) => {
     ));
     return (
         <header>
-            <div style={styles.container}>
-                <div style={{...styles.itemContainer, ...(matches && styles.adaptive)}}>
-                    <div style={styles.logo}>
-                        <p style={styles.header}>
-                            GolTeens Lab
-                        </p>
+        <div style={styles.container}>
+            <div style={{...styles.itemContainer, ...(matches && styles.adaptive)}}>
+                <div style={styles.logo}>
+                    <p style={styles.header}>
+                        GolTeens Lab
+                    </p>
+                </div>
+                { matches ? (
+                    <div style={styles.links}>
+                        <button style={styles.iconButton}>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="32" height="32" viewBox="0 0 32 32" strokeWidth="2" stroke="currentColor"
+                                 fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M4 6l16 0"/>
+                                <path d="M4 12l16 0"/>
+                                <path d="M4 18l16 0"/>
+                            </svg>
+                        </button>
                     </div>
-                    { matches ? (
-                        <div style={styles.links}>
-                            <button style={styles.iconButton}>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     width="32" height="32" viewBox="0 0 32 32" strokeWidth="2" stroke="currentColor"
-                                     fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <path d="M4 6l16 0"/>
-                                    <path d="M4 12l16 0"/>
-                                    <path d="M4 18l16 0"/>
-                                </svg>
-                            </button>
-                        </div>
 
-                    ) : (
-                        <>
-                            <div style={styles.links}>
-                                {linkItems}
-                            </div>
-                            <div style={styles.links}>
-                                <CoolButton>Додати стартап</CoolButton>
-                            </div>
-                        </>
-                    )}
-                </div>
-<<<<<<< HEAD
-                <div style={styles.links}>
-                    {linkItems}
-                </div>
-                    <a href="#">
-                        <CoolButton onclick='AddMod()'>Додати стартап</CoolButton>
-                    </a>
-            </div> 
-            <script src={AddMod}></script>
-        </header>  
-       
-=======
+                ) : (
+                    <>
+                        <div style={styles.links}>
+                            {linkItems}
+                        </div>
+                        <div style={styles.links}>
+                            <CoolButton>Додати стартап</CoolButton>
+                        </div>
+                    </>
+                )}
             </div>
-        </header>
->>>>>>> 8323967400856b35cdb261a77ac892de97e7b809
+        </div>
+    </header>
     );
 }
 
