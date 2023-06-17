@@ -4,6 +4,14 @@ import {ThemeColors} from "../constants/colors";
 import CoolButton from "./CoolButton";
 import AddMod from "./AddMod";
 
+
+
+
+
+
+
+
+
 const styles = {
     "container": {
         background: ThemeColors.light.main + 'C0',
