@@ -2,6 +2,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "./routes/Layout";
 import Startups from "./routes/Startups";
 import Events from "./routes/Events";
+import AddMod from "./components/AddMod";
 
 function App() {
   return (
@@ -16,5 +17,9 @@ function App() {
   );
 }
 
+
+
+
 export default App;
+
  

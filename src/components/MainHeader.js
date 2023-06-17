@@ -1,7 +1,7 @@
 import {string} from "prop-types";
 import {Link} from "react-router-dom";
 import {ThemeColors} from "../constants/colors";
-import CoolButton from "./CoolButton";
+import ModalButton from "./ModalButton";
 
 
 import {useEffect, useState} from "react";
@@ -136,7 +136,7 @@ const MainHeader = (props) => {
                             {linkItems}
                         </div>
                         <div style={styles.links}>
-                            <CoolButton>Додати стартап</CoolButton>
+                            <ModalButton >Додати стартап</ModalButton>
                         </div>
                     </>
                 )}
@@ -149,5 +149,6 @@ const MainHeader = (props) => {
 MainHeader.propTypes = {
     active: string,
 }
+
 
 export default MainHeader   // ИСХОД

@@ -4,7 +4,11 @@ import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 import './Pas.css'
 
+import './MainHeader.js'
+
 function AddMod(){
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  
 const openModal = () => {
   setModalIsOpen(true);
 };
@@ -14,7 +18,7 @@ const closeModal = () => {
 };
 
 
-const [modalIsOpen, setModalIsOpen] = useState(false);
+
 
 const modalContent = (
 
@@ -77,21 +81,24 @@ const modalContent = (
    
   );
   
- 
 
-    
+  
+  
   return (
     <div>
       <button onClick={openModal}>Открыть модальное окно</button>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
         {modalContent}
+        
       </Modal>
+      
     </div>
+    
   );  
 
 ;}
 export default AddMod
-
+ 
 //ИСХОД
 
 

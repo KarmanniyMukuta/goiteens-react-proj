@@ -1,5 +1,6 @@
 import {ThemeColors} from "../constants/colors";
 import {node, string} from "prop-types";
+import openModal from './AddMod'
 
 const styles = (color, fore) => ({
     "button": {
@@ -20,13 +21,22 @@ const styles = (color, fore) => ({
     }
 });
 
+
+
+
+
 const CoolButton = (props) => {
     const useStyles = styles(props.background ?? '#3787FF',
         props.foreground ?? '#ffffff');
     return (
-        <button style={useStyles.button}>
+        <button onClick={openModal} style={useStyles.button}>
             {props.children}
         </button>
+
+
+
+
+
     );
 };
 
